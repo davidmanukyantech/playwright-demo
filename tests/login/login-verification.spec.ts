@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { goToLoginPage, goToStartPage } from "../actions/navigation";
+import { goToLoginPage, goToStartPage } from "../../actions/navigation";
 
 test(
   "Verify a user can login to the application with valid credentials",
