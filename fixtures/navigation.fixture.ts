@@ -1,6 +1,7 @@
 import { test as base } from "@playwright/test";
 import MyAccountPage from "../pages/my-account/MyAccountPage";
 import { goToLoginPage, goToStartPage } from "../actions/navigation";
+import Navigation from "../pages/Navigation";
 
 type Fixtures = {
   myAccountPage: MyAccountPage;
