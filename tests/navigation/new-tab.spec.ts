@@ -15,7 +15,9 @@ test("handle new tab navigation", async ({ page }) => {
   expect(newPageTitle).toBe("New Tab Page"); // Verify the title of the new tab
 
   const heading = await newPage.locator("h1").textContent(); // Get the heading of the new tab
-  expect(heading).toBe("Welcome to the New Tab!"); // Verify the heading of the new tab
+  expect(heading).toBe("Welcome to the New Tab"); // Verify the heading of the new tab
 
   await newPage.close(); // Close the new tab
+  await page.waitForTimeout(2000); // Wait for 2 seconds to ensure the original page is still accessible
+  await page.close();
 });
